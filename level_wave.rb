@@ -2,7 +2,7 @@
 
 # Base function to create a line + sin progression
 class Wave
-  def initialize(angular, amp, freq)
+  def initialize(angular:, amp:, freq:)
     @a = angular
     @amp = amp
     @w = freq
@@ -10,7 +10,7 @@ class Wave
   end
 
   def at(step)
-    @a * (step - @t0) + @amp * Math.cos(@w * (step - @t0))
+    (@a * (step - @t0)) + (@amp * Math.cos(@w * (step - @t0)))
   end
 
   def x_min_origin
@@ -19,18 +19,18 @@ class Wave
   end
 
   def x_min(level)
-    (-Math.asin(@a / (@amp * @w)) + 2 * Math::PI * level + @t0 * @w + Math::PI) / @w
+    (-Math.asin(@a / (@amp * @w)) + (2 * Math::PI * level) + (@t0 * @w) + Math::PI) / @w
   end
 
   def x_max(level)
-    (Math.asin(@a / (@amp * @w)) + 2 * Math::PI * level + @t0 * @w) / @w
+    (Math.asin(@a / (@amp * @w)) + (2 * Math::PI * level) + (@t0 * @w)) / @w
   end
 end
 
 # Power class using wave class
 class Power
-  def initialize(angular, amp, freq)
-    @wave = Wave.new(angular, amp, freq)
+  def initialize(angular:, amp:, freq:)
+    @wave = Wave.new(angular: angular, amp: amp, freq: freq)
     @c = @wave.at(0)
   end
 
@@ -57,10 +57,10 @@ end
 
 # Tool to create a level progression
 class LevelPower
-  def initialize(level, level_steps, power_options = [])
-    @power = Power.new(*power_options)
+  def initialize(level: 1, steps: 30, power: { angular: 0.5, amp: 5, freq: 0.5 })
+    @power = Power.new(angular: power[:angular], amp: power[:amp], freq: power[:freq])
     @level = level
-    @level_steps = level_steps
+    @level_steps = steps
     create_level_powers
   end
 
@@ -77,4 +77,3 @@ class LevelPower
     @powers = (s..e).step(by).to_a.map { |y| @power.at(y) }
   end
 end
-

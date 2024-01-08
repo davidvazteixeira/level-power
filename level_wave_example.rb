@@ -4,9 +4,9 @@ require_relative 'level_wave'
 
 # Using
 level = 2
-level_steps = 30
-
-level_power = LevelPower.new(level, level_steps, [0.5, 5, 0.5])
+steps = 30
+power = { angular: 0.5, amp: 5, freq: 0.5 }
+level_power = LevelPower.new(level: level, steps: steps, power: power)
 
 puts "Level #{level} - Step: Power"
 30.times do |step|
