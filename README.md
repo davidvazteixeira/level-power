@@ -1,6 +1,6 @@
 # Level Power
 
-Creates a difficult progression, organized in levels.
+Creates a progression of difficulties, organized in levels.
 
 # Use
 
