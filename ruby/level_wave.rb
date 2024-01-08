@@ -57,6 +57,8 @@ end
 
 # Tool to create a level progression
 class LevelPower
+  attr_reader :powers
+
   def initialize(level: 1, steps: 30, power: { angular: 0.5, amp: 5, freq: 0.5 })
     @power = Power.new(angular: power[:angular], amp: power[:amp], freq: power[:freq])
     @level = level

@@ -1,8 +1,8 @@
 rm(list = ls())
 par(mfrow=c(1,1))
 
-a = 0.5   # Dificuldade (inclinação da reta base)
-A = 10    # Variação da fase (amplitude da oscilação)
+a = 0.5  # Dificuldade (inclinação da reta base)
+A = 2    # Variação da fase (amplitude da oscilação)
 w = 0.5  # frequencia da oscilacao
 
 # Funções auxiliares
