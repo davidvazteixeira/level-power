@@ -122,13 +122,21 @@ Step: 	Power
 
 ## The progression of levels will be like this chart.
 
+<div style='background-color: white;'>
+
 ![](docs/images/progression.png)
+
+</div>
 
 Using: Level=1, angular=0.5, amp=10 and freq=0.5
 
 ## A level comparison chart
- 
+
+<div style='background-color: white;'>
+
 ![](docs/images/levels.png)
+
+</div>
 
 Using: Level=1, angular=0.5, amp=10 and freq=0.5
 
@@ -136,13 +144,13 @@ Using: Level=1, angular=0.5, amp=10 and freq=0.5
 
 <table>
 <tr>
-<td>
+<td style='background-color: white;'>
 
-![](docs/images/progression.png) 
+![](docs/images/progression.png)
 
 </td>
 
-<td>
+<td style='background-color: white;'>
 
 ![](docs/images/freq.png)
 
@@ -156,13 +164,13 @@ Frequency change effect
 
 <table>
 <tr>
-<td>
+<td style='background-color: white;'>
 
 ![](docs/images/progression.png)
 
 </td>
 
-<td>
+<td style='background-color: white;'>
 
  ![](docs/images/amp.png)
 
